@@ -59,8 +59,3 @@
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 }
-
-
-/* background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
