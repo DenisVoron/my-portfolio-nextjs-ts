@@ -5,11 +5,11 @@ import TopLeftImg from "./TopLeftImg";
 
 const Layout: FC = (): JSX.Element => {
   return (
-    <header>
+    <div>
       <TopLeftImg />
       <Nav />
       <Header />
-    </header>
+    </div>
   );
 };
 

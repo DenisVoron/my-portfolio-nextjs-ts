@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 // icons
 import {
   FaHtml5,
@@ -14,6 +15,11 @@ import {
   SiAdobexd,
   SiAdobephotoshop,
 } from "react-icons/si";
+
+import useStateExp from "../hooks/expUseState";
+import Avatar from "../components/Avatar";
+import Circles from "../components/Circles";
+import AnimatedAvatarAbout from "../components/AnimatedAvatarAbout";
 
 //  data
 const aboutData = [
@@ -91,8 +97,36 @@ const aboutData = [
   },
 ];
 
-const About = () => {
-  return <div>About</div>;
+const About: FC = (): JSX.Element => {
+  // const { index, setIndex } = useStateExp();
+
+  return (
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+      <Circles />
+      <AnimatedAvatarAbout>
+        <Avatar />
+      </AnimatedAvatarAbout>
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+        <div>Text</div>
+        <div>
+          <div className="flex gap-x-2 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+            {aboutData.map((item, itemIndex) => (
+              <div
+                key={itemIndex}
+                className={` cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+              >
+                {item.title}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default About;
+
+// ${
+//                   // index === itemIndex && ""
+//                 }
