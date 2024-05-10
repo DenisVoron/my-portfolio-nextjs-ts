@@ -1,25 +1,37 @@
 import { ReactNode } from "react";
 
-export type navDataType = {
+export type NavDataType = {
   name: string;
   path: string;
   icon: JSX.Element;
 };
 
-export type childProp = {
+export type ChildProp = {
   children: ReactNode;
 };
 
-export type propAboutLink = {
+export type PropAboutLink = {
   title: string;
   index: number;
 };
 
-type typeSearchParams = {
+type TypeSearchParams = {
   me: string;
   tab: string;
 };
 
 export interface ISearchParamsProp {
-  searchParams?: typeSearchParams;
+  searchParams?: TypeSearchParams;
 }
+
+type DataWithIcon = {
+  title: string;
+  icons: React.JSX.Element[];
+};
+
+type DataWithStage = {
+  title: string;
+  stage: string;
+};
+
+export type UnitedDataTyp = DataWithIcon | DataWithStage;

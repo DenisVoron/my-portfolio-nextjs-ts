@@ -2,10 +2,10 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { childProp } from "../lib/definitions-typ";
+import { ChildProp } from "../lib/definitions-typ";
 import { fadeIn } from "../lib/variant";
 
-const AnimatedAvatarAbout: FC<childProp> = ({ children }) => {
+const AnimatedAvatarAbout: FC<ChildProp> = ({ children }) => {
   return (
     <motion.div
       variants={fadeIn("right", 0.2)}

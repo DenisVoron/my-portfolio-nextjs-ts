@@ -16,7 +16,7 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-import { ISearchParamsProp } from "../lib/definitions-typ";
+import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-typ";
 import Avatar from "../components/Avatar";
 import Circles from "../components/Circles";
 import AnimatedAvatarAbout from "../components/AnimatedAvatarAbout";
@@ -108,20 +108,45 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
         <Avatar />
       </AnimatedAvatarAbout>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div>Text</div>
-        <div>
-          <div className="flex gap-x-2 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+        <div className="flex-1 flex flex-col justify-center">Text</div>
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[310px]">
+          <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, index) => (
               <AboutNavLink key={item.title} title={item.title} index={index} />
             ))}
           </div>
-          <div>
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div key={itemIndex}>
-                  <div>{item.title}</div>
-                </div>
-              );
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item: UnitedDataTyp, itemIndex) => {
+              if ("stage" in item) {
+                return (
+                  <div
+                    key={itemIndex}
+                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  >
+                    <div className=" font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="hidden md:flex">-</div>
+                    <div>{item.stage}</div>
+                  </div>
+                );
+              }
+              if ("icons" in item) {
+                return (
+                  <div
+                    key={itemIndex}
+                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  >
+                    <div>{item.title}</div>
+                    <div className="hidden md:flex">-</div>
+                    <div className=" flex gap-x-4">
+                      {item.icons.map((icon, index) => (
+                        <div key={index} className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
             })}
           </div>
         </div>
@@ -131,16 +156,3 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
 };
 
 export default About;
-
-// ${
-//                   // index === itemIndex && ""
-//                 }
-
-{
-  /* <div
-  key={itemIndex}
-  className={`cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
->
-  {item.title}
-</div>; */
-}

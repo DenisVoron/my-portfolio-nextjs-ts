@@ -3,9 +3,9 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/variant";
-import { childProp } from "../lib/definitions-typ";
+import { ChildProp } from "../lib/definitions-typ";
 
-const AnimatedTitle: FC<childProp> = ({ children }): JSX.Element => {
+const AnimatedTitle: FC<ChildProp> = ({ children }): JSX.Element => {
   return (
     <motion.h1
       variants={fadeIn("down", 0.2)}
