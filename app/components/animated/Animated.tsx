@@ -3,8 +3,8 @@
 import { FC } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChildProp } from "../lib/definitions-typ";
-import Transition from "./Transition";
+import { ChildProp } from "../../lib/definitions-typ";
+import Transition from "../Transition";
 
 const Animated: FC<ChildProp> = ({ children }): JSX.Element => {
   const pathname = usePathname();

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import Layout from "./components/Layout";
-import Animated from "./components/Animated";
+import Animated from "./components/animated/Animated";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -33,4 +33,4 @@ const RootLayout = ({
 };
 export default RootLayout;
 
-// https://youtu.be/qp0-L_M3Ad4?t=5939
+// https://youtu.be/qp0-L_M3Ad4?t=6208

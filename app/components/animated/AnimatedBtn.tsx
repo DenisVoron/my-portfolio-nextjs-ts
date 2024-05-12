@@ -1,8 +1,8 @@
 "use client";
 
 import { FC } from "react";
-import { ChildProp } from "../lib/definitions-typ";
-import { fadeIn } from "../lib/variant";
+import { ChildProp } from "../../lib/definitions-typ";
+import { fadeIn } from "../../lib/variant";
 import { motion } from "framer-motion";
 
 const AnimatedBtn: FC<ChildProp> = ({ children }): JSX.Element => {

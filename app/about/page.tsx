@@ -20,9 +20,12 @@ import {
 import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-typ";
 import Avatar from "../components/Avatar";
 import Circles from "../components/Circles";
-import AnimatedAvatarAbout from "../components/AnimatedAvatarAbout";
+import AnimatedAvatarAbout from "../components/animated/AnimatedAvatarAbout";
 import AboutNavLink from "../components/AboutNavLink";
 import CountUp from "../components/CountUpComponent";
+import AnimatedTitleAbout from "../components/animated/AnimatedTitleAbout";
+import AnimatedDescrAbout from "../components/animated/AnimatedDescrAbout";
+import AnimatedCountsAbout from "../components/animated/AnimatedCountsAbout";
 
 //  data
 const aboutData = [
@@ -111,17 +114,17 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
       </AnimatedAvatarAbout>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="h2">
+          <AnimatedTitleAbout>
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs.
-          </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+          </AnimatedTitleAbout>
+          <AnimatedDescrAbout>
             10 years ago, I began freelancing as a developer. Since then, I`ve
             done remote work for agencies, counsulted for startaps, and
             collaborated on digital products for business and consumer use.
-          </p>
-          <div>
-            <div>
+          </AnimatedDescrAbout>
+          <AnimatedCountsAbout>
+            <div className=" flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={1} duration={3} /> +
@@ -139,7 +142,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedCountsAbout>
         </div>
         <div className="flex flex-col w-full xl:max-w-[48%] h-[310px]">
           <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-4">

@@ -2,10 +2,10 @@ import { FC } from "react";
 import ParticlesContainer from "./components/ParticlesContainer";
 import ProjectsBtn from "./components/ProjectsBtn";
 import Avatar from "./components/Avatar";
-import AnimatedBtn from "./components/AnimatedBtn";
-import AnimatedText from "./components/AnimatedText";
-import AnimatedTitle from "./components/AnimatedTitle";
-import AnimatedAvatar from "./components/AnimatedAvatar";
+import AnimatedBtn from "./components/animated/AnimatedBtn";
+import AnimatedText from "./components/animated/AnimatedText";
+import AnimatedTitle from "./components/animated/AnimatedTitle";
+import AnimatedAvatar from "./components/animated/AnimatedAvatar";
 
 const Home: FC = (): JSX.Element => {
   return (
