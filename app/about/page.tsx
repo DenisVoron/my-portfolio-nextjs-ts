@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 // icons
 import {
@@ -26,6 +26,7 @@ import CountUp from "../components/CountUpComponent";
 import AnimatedTitleAbout from "../components/animated/AnimatedTitleAbout";
 import AnimatedDescrAbout from "../components/animated/AnimatedDescrAbout";
 import AnimatedCountsAbout from "../components/animated/AnimatedCountsAbout";
+import AnimatedLinkExperience from "../components/animated/AnimatedLinkExperience";
 
 //  data
 const aboutData = [
@@ -144,7 +145,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
             </div>
           </AnimatedCountsAbout>
         </div>
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[310px]">
+        <AnimatedLinkExperience>
           <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, index) => (
               <AboutNavLink key={item.title} title={item.title} index={index} />
@@ -184,7 +185,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
               }
             })}
           </div>
-        </div>
+        </AnimatedLinkExperience>
       </div>
     </div>
   );
