@@ -1,4 +1,20 @@
 import { ReactNode } from "react";
+import Swiper from "swiper";
+
+declare global {
+  namespace JSX {
+    export interface IntrinsicElements {
+      "swiper-container": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & { children: Element[] };
+      "swiper-slide": React.DetailedHTMLProps<
+        React.HtmlHTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
+  }
+}
 
 export type NavDataType = {
   name: string;
@@ -35,3 +51,5 @@ type DataWithStage = {
 };
 
 export type UnitedDataTyp = DataWithIcon | DataWithStage;
+
+//  a11y: Swiper;

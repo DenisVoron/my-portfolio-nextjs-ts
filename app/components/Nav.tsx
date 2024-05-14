@@ -12,7 +12,7 @@ import {
   HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
-import { NavDataType } from "../lib/definitions-typ";
+import { NavDataType } from "../lib/definitions-type";
 
 // nav data
 export const navData = [

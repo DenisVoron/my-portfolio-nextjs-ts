@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { ChildProp } from "../../lib/definitions-typ";
+import { ChildProp } from "../../lib/definitions-type";
 import { fadeIn } from "../../lib/variant";
 
 const AnimatedAvatarAbout: FC<ChildProp> = ({ children }): JSX.Element => {

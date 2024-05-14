@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { PropAboutLink } from "../lib/definitions-typ";
+import { PropAboutLink } from "../lib/definitions-type";
 
 const AboutNavLink: FC<PropAboutLink> = ({ title, index }): JSX.Element => {
   const searchParams = useSearchParams();

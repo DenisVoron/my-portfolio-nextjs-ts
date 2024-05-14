@@ -17,7 +17,7 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-typ";
+import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-type";
 import Avatar from "../components/Avatar";
 import Circles from "../components/Circles";
 import AnimatedAvatarAbout from "../components/animated/AnimatedAvatarAbout";
