@@ -89,21 +89,27 @@ const ServiceSlider: FC = (): JSX.Element => {
 
   return (
     <swiper-container
-      pagination
+      slidesPerView={3}
+      spaceBetween={15}
+      pagination={true}
       freeMode={true}
+      pagination-dynamic-bullets="true"
       modules={[Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      class="h-[240px] sm:h-[340px]"
     >
       {serviceData.map((item, index) => (
-        <swiper-slide key={index}>
+        <swiper-slide
+          key={index}
+          class="bg-[rgba(65,47,123, 0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer"
+        >
           <div className="bg-[rgba(65,47,123, 0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer">
             <div>{item.icon}</div>
             {/* title & desc */}
             <div>
               <div>{item.title}</div>
-              <p>{item.description}</p>
+              <p className="">{item.description}</p>
             </div>
-            <div className="text-3xl">
+            <div className="text-2xl">
               <RxArrowTopRight />
             </div>
           </div>
@@ -143,3 +149,5 @@ export default ServiceSlider;
 //           spaceBetween: 15,
 //         },
 //       }}
+
+// className = " h-[240px] sm:h-[340px]";

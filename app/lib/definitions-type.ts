@@ -10,15 +10,18 @@ declare global {
         HTMLElement
       > & {
         children: Element[];
+        slidesPerView: number;
+        spaceBetween: number;
         pagination: true;
         freeMode: true;
+        "pagination-dynamic-bullets": string;
         modules: SwiperModule[];
-        className: string;
+        class: string;
       };
       "swiper-slide": React.DetailedHTMLProps<
         React.HtmlHTMLAttributes<HTMLElement>,
         HTMLElement
-      >;
+      > & {class: string};
     }
   }
 }
