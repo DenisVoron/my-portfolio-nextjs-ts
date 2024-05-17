@@ -1,11 +1,8 @@
 "use client";
 
-import { FC } from "react";
-import Swiper from "swiper";
-import "swiper/css/bundle";
-
+import { FC, useEffect } from "react";
 import { register } from "swiper/element/bundle";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
 
 // icons
 import {
@@ -67,42 +64,38 @@ register();
 // });
 
 const ServiceSlider: FC = (): JSX.Element => {
-  // const { FreeMode, Navigation, Pagination } = await getSwiperModules();
+  useEffect(() => {
+    const swiperEl = document.querySelector("swiper-container");
 
-  // new Swiper(".swiper-container", {
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 15,
-  //     },
-  //     640: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 15,
-  //     },
-  //   },
-  //   pagination: {
-  //     clickable: true,
-  //   },
-  //   freeMode: true,
-  //   modules: [FreeMode, Pagination],
-  // });
+    const swiperParams = {
+      freeMode: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+      },
+      pagination: {
+        clickable: true,
+      },
+      modules: [FreeMode, Pagination],
+    };
+    if (swiperEl) Object.assign(swiperEl, swiperParams);
+    swiperEl?.initialize();
+  }, []);
 
   return (
-    <swiper-container
-      slidesPerView={3}
-      spaceBetween={15}
-      pagination={true}
-      freeMode={true}
-      pagination-dynamic-bullets="true"
-      modules={[Pagination]}
-      class="h-[240px] sm:h-[340px]"
-    >
+    <swiper-container class="w-72 sm:w-[40rem] h-[210px] sm:h-[220px]">
       {serviceData.map((item, index) => (
         <swiper-slide
           key={index}
-          class="bg-[rgba(65,47,123, 0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer"
+          style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
         >
-          <div className="bg-[rgba(65,47,123, 0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer">
+          <div className="h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
             <div>{item.icon}</div>
             {/* title & desc */}
             <div>
@@ -121,33 +114,15 @@ const ServiceSlider: FC = (): JSX.Element => {
 
 export default ServiceSlider;
 
-// <swiper-slide key={index}></swiper-slide>
-
-{
-  /* <swiper-slide>Service Slider</swiper-slide>
-      <swiper-slide>Service Slider1</swiper-slide>
-      <swiper-slide>Service Slider2</swiper-slide>
-      <swiper-slide>Service Slider3</swiper-slide> */
-}
 // slides-per-view="1"
 //       space-between="15"
 //       speed="500"
 //       loop="true"
 //       css-mode="true"
 
-// modules={[Navigation, Pagination]}
-
-// freeMode={true}
-
-// breakpoints={{
-//         320: {
-//           slidesPerView: 1,
-//           spaceBetween: 15,
-//         },
-//         640: {
-//           slidesPerView: 3,
-//           spaceBetween: 15,
-//         },
-//       }}
-
-// className = " h-[240px] sm:h-[340px]";
+// slidesPerView={3}
+//       spaceBetween={15}
+//       pagination={true}
+//       freeMode={true}
+//       pagination-dynamic-bullets="true"
+//       modules={[Pagination]}

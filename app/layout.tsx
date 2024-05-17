@@ -34,5 +34,3 @@ const RootLayout = ({
 export default RootLayout;
 
 // https://youtu.be/qp0-L_M3Ad4?t=7084
-
-// https://youtu.be/imhdh4xCh7I?t=487

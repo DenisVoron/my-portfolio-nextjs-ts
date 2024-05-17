@@ -4,7 +4,6 @@ import { fadeIn } from "@/app/lib/variant";
 import ServiceSlider from "@/app/components/ServiceSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
-// import SliderPagination from "../components/SliderPagination";
 
 const Services: FC = (): JSX.Element => {
   return (

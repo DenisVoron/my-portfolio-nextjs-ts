@@ -1,6 +1,4 @@
-import { MutableRefObject, ReactNode } from "react";
-import Swiper from "swiper";
-import { SwiperModule } from "swiper/types";
+import { ReactNode } from "react";
 
 declare global {
   namespace JSX {
@@ -10,18 +8,12 @@ declare global {
         HTMLElement
       > & {
         children: Element[];
-        slidesPerView: number;
-        spaceBetween: number;
-        pagination: true;
-        freeMode: true;
-        "pagination-dynamic-bullets": string;
-        modules: SwiperModule[];
         class: string;
       };
       "swiper-slide": React.DetailedHTMLProps<
         React.HtmlHTMLAttributes<HTMLElement>,
         HTMLElement
-      > & {class: string};
+      >;
     }
   }
 }
@@ -61,13 +53,3 @@ type DataWithStage = {
 };
 
 export type UnitedDataTyp = DataWithIcon | DataWithStage;
-
-//  a11y: Swiper;
-// modules: SwiperModule[];
-
-// freeMode: boolean;
-
-// breakpoints: {
-//           320: { slidesPerView: number; spaceBetween: number };
-//           640: { slidesPerView: number; spaceBetween: number };
-//         };
