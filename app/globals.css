@@ -6,16 +6,8 @@
   transform: translateZ(0px);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+swiper-container::part(bullet-active) {
   background-color: #f13024;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after,
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  color: #f13024;
 }
 
 /* bg-secondary */

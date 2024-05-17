@@ -45,24 +45,6 @@ const serviceData = [
 
 register();
 
-// const swiper = new Swiper(".swiper-container", {
-//   freeMode: true,
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 15,
-//     },
-//     640: {
-//       slidesPerView: 3,
-//       spaceBetween: 15,
-//     },
-//   },
-//   pagination: {
-//     clickable: true,
-//   },
-//   modules: [FreeMode, Pagination],
-// });
-
 const ServiceSlider: FC = (): JSX.Element => {
   useEffect(() => {
     const swiperEl = document.querySelector("swiper-container");
@@ -84,6 +66,7 @@ const ServiceSlider: FC = (): JSX.Element => {
       },
       modules: [FreeMode, Pagination],
     };
+
     if (swiperEl) Object.assign(swiperEl, swiperParams);
     swiperEl?.initialize();
   }, []);
@@ -113,16 +96,3 @@ const ServiceSlider: FC = (): JSX.Element => {
 };
 
 export default ServiceSlider;
-
-// slides-per-view="1"
-//       space-between="15"
-//       speed="500"
-//       loop="true"
-//       css-mode="true"
-
-// slidesPerView={3}
-//       spaceBetween={15}
-//       pagination={true}
-//       freeMode={true}
-//       pagination-dynamic-bullets="true"
-//       modules={[Pagination]}
