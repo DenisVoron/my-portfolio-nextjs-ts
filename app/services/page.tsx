@@ -22,8 +22,9 @@ const Services: FC = (): JSX.Element => {
             </p>
           </div>
           {/* slider */}
-          <ServiceSlider />
-          {/* <SliderPagination /> */}
+          <div className="w-full xl:max-w-[65%]">
+            <ServiceSlider />
+          </div>
         </div>
       </div>
       <Bulb />

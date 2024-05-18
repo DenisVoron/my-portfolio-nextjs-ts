@@ -72,18 +72,20 @@ const ServiceSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="w-72 sm:w-[40rem] h-[210px] sm:h-[220px]">
+    <swiper-container class="h-[180px] sm:h-[220px]">
       {serviceData.map((item, index) => (
         <swiper-slide
           key={index}
           style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
         >
-          <div className="h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
-            <div>{item.icon}</div>
+          <div className="h-max rounded-lg px-6 py-5 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
+            <div className="text-base sm:text-lg text-accent mb-3">
+              {item.icon}
+            </div>
             {/* title & desc */}
-            <div>
+            <div className=" mb">
               <div>{item.title}</div>
-              <p className="">{item.description}</p>
+              <p className="text-sm sm:text-base">{item.description}</p>
             </div>
             <div className="text-2xl">
               <RxArrowTopRight />
