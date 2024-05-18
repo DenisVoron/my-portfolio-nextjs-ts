@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { ChildProp } from "@/app/lib/definitions-typ";
+import { type ChildProp } from "@/app/lib/definitions-type";
 import { fadeIn } from "@/app/lib/variant";
 
 const AnimatedDescrAbout: FC<ChildProp> = ({ children }): JSX.Element => {

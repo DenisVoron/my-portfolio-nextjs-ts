@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { ChildProp } from "../../lib/definitions-type";
+import { type ChildProp } from "../../lib/definitions-type";
 import { fadeIn } from "../../lib/variant";
 import { motion } from "framer-motion";
 

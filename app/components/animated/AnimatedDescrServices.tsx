@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/app/lib/variant";
 import { type ChildProp } from "@/app/lib/definitions-type";
 
-const AnimatedLinkExperience: FC<ChildProp> = ({ children }) => {
+const AnimatedDescrServices: FC<ChildProp> = ({ children }): JSX.Element => {
   return (
-    <motion.div
-      variants={fadeIn("left", 0.4)}
+    <motion.p
+      variants={fadeIn("up", 0.4)}
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="flex flex-col w-full xl:max-w-[48%] h-[310px]"
+      className="mb-4 max-w-[400px] mx-auto lg:mx-0"
     >
       {children}
-    </motion.div>
+    </motion.p>
   );
 };
 
-export default AnimatedLinkExperience;
+export default AnimatedDescrServices;

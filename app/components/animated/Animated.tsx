@@ -3,7 +3,7 @@
 import { FC } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChildProp } from "../../lib/definitions-type";
+import { type ChildProp } from "@/app/lib/definitions-type";
 import Transition from "../Transition";
 
 const Animated: FC<ChildProp> = ({ children }): JSX.Element => {

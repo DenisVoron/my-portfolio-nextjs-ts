@@ -83,12 +83,12 @@ const ServiceSlider: FC = (): JSX.Element => {
               {item.icon}
             </div>
             {/* title & desc */}
-            <div className=" mb">
-              <div>{item.title}</div>
+            <div className="mb-8">
+              <div className="mb-2 text-base">{item.title}</div>
               <p className="text-sm sm:text-base">{item.description}</p>
             </div>
             <div className="text-2xl">
-              <RxArrowTopRight />
+              <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
             </div>
           </div>
         </swiper-slide>

@@ -6,7 +6,8 @@
   transform: translateZ(0px);
 }
 
-swiper-container::part(bullet-active) {
+swiper-container::part(bullet-active),
+swiper-container::part(bullet) {
   background-color: #f13024;
 }
 
