@@ -97,12 +97,14 @@ const WorkSlider: FC = (): JSX.Element => {
                   {/* overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                   {/* title */}
-                  <div className="absolute">
-                    <div>
+                  <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                    <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                       {/* title part one */}
-                      <div>title part 1</div>
+                      <div className="delay-100">title part 1</div>
                       {/* title part two */}
-                      <div>title part 2</div>
+                      <div className=" translate-y-[500%] group-hover:translate-y-0">
+                        title part 2
+                      </div>
                       {/* icon */}
                       <div>icon</div>
                     </div>
@@ -118,17 +120,3 @@ const WorkSlider: FC = (): JSX.Element => {
 };
 
 export default WorkSlider;
-
-{
-  /* <div className="h-max rounded-lg px-6 py-5 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
-  <div className="text-base sm:text-lg text-accent mb-3">{item.icon}</div>
-  {/* title & desc */
-}
-/*<div className="mb-8">
-    <div className="mb-2 text-base">{item.title}</div>
-    <p className="text-sm sm:text-base">{item.description}</p>
-  </div>
-  <div className="text-2xl">
-    <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
-  </div>
-</div>; */

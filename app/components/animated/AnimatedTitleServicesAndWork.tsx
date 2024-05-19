@@ -5,7 +5,9 @@ import { fadeIn } from "@/app/lib/variant";
 import { motion } from "framer-motion";
 import { type ChildProp } from "@/app/lib/definitions-type";
 
-const AnimatedTitleService: FC<ChildProp> = ({ children }): JSX.Element => {
+const AnimatedTitleServiceAndWork: FC<ChildProp> = ({
+  children,
+}): JSX.Element => {
   return (
     <motion.h2
       variants={fadeIn("up", 0.2)}
@@ -19,4 +21,4 @@ const AnimatedTitleService: FC<ChildProp> = ({ children }): JSX.Element => {
   );
 };
 
-export default AnimatedTitleService;
+export default AnimatedTitleServiceAndWork;

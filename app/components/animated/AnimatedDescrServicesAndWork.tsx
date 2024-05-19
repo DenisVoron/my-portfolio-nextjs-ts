@@ -5,18 +5,20 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/app/lib/variant";
 import { type ChildProp } from "@/app/lib/definitions-type";
 
-const AnimatedServiceSlider: FC<ChildProp> = ({ children }): JSX.Element => {
+const AnimatedDescrServicesAndWork: FC<ChildProp> = ({
+  children,
+}): JSX.Element => {
   return (
-    <motion.div
-      variants={fadeIn("down", 0.6)}
+    <motion.p
+      variants={fadeIn("up", 0.4)}
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="w-full xl:max-w-[65%]"
+      className="mb-4 max-w-[400px] mx-auto lg:mx-0"
     >
       {children}
-    </motion.div>
+    </motion.p>
   );
 };
 
-export default AnimatedServiceSlider;
+export default AnimatedDescrServicesAndWork;

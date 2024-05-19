@@ -2,9 +2,9 @@ import { FC } from "react";
 import WorkSlider from "@/app/components/WorkSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
-import AnimatedTitleService from "../components/animated/AnimatedTitleServices";
-import AnimatedDescrServices from "../components/animated/AnimatedDescrServices";
-import AnimatedServiceSlider from "../components/animated/AnimatedServiceSlider";
+import AnimatedTitleServiceAndWork from "../components/animated/AnimatedTitleServicesAndWork";
+import AnimatedDescrServicesAndWork from "../components/animated/AnimatedDescrServicesAndWork";
+import AnimatedSliderServicesAndWork from "../components/animated/AnimatedSliderServicesAndWork";
 
 const Work: FC = (): JSX.Element => {
   return (
@@ -13,19 +13,19 @@ const Work: FC = (): JSX.Element => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
-            <AnimatedTitleService>
+            <AnimatedTitleServiceAndWork>
               My work <span className="text-accent">.</span>
-            </AnimatedTitleService>
-            <AnimatedDescrServices>
+            </AnimatedTitleServiceAndWork>
+            <AnimatedDescrServicesAndWork>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ab
               deleniti maxime quae cupiditate facilis eaque quibusdam qui, ipsa
               nisi.
-            </AnimatedDescrServices>
+            </AnimatedDescrServicesAndWork>
           </div>
           {/* slider */}
-          <AnimatedServiceSlider>
+          <AnimatedSliderServicesAndWork>
             <WorkSlider />
-          </AnimatedServiceSlider>
+          </AnimatedSliderServicesAndWork>
         </div>
       </div>
       <Bulb />
