@@ -1,13 +1,12 @@
 "use client";
 
 import { FC, useEffect } from "react";
+import Image from "next/image";
 import { register } from "swiper/element/bundle";
 import { Pagination } from "swiper/modules";
 
 // icons
 import { BsArrowRight } from "react-icons/bs";
-import { CgSpaceBetween } from "react-icons/cg";
-import Image from "next/image";
 
 // data
 const workSlides = {
@@ -86,7 +85,7 @@ const WorkSlider: FC = (): JSX.Element => {
                 key={index}
                 className="relative rounded-lg md:rounded-lg overflow-hidden flex items-center justify-center group"
               >
-                <div className="flex items-center justify-center relative overflow-hidden">
+                <div className="flex items-center justify-center relative overflow-hidden group">
                   {/* {image} */}
                   <Image
                     src={image.path}
@@ -100,13 +99,15 @@ const WorkSlider: FC = (): JSX.Element => {
                   <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                     <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                       {/* title part one */}
-                      <div className="delay-100">title part 1</div>
+                      <div className="delay-100">LIVE</div>
                       {/* title part two */}
-                      <div className=" translate-y-[500%] group-hover:translate-y-0">
-                        title part 2
+                      <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                        PROJECT
                       </div>
                       {/* icon */}
-                      <div>icon</div>
+                      <div className=" text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                        <BsArrowRight />
+                      </div>
                     </div>
                   </div>
                 </div>
