@@ -3,7 +3,7 @@
 import { FC, useEffect } from "react";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 // icons
 import { FaQuoteLeft } from "react-icons/fa";
@@ -40,11 +40,11 @@ const TestimonialSlider: FC = (): JSX.Element => {
     const swiperEl = document.querySelector("swiper-container");
 
     const swiperParams = {
-      spaceBetween: 10,
+      navigation: true,
       pagination: {
         clickable: true,
       },
-      modules: [Pagination],
+      modules: [Navigation, Pagination],
     };
 
     if (swiperEl) Object.assign(swiperEl, swiperParams);
@@ -71,7 +71,9 @@ const TestimonialSlider: FC = (): JSX.Element => {
                 {/* name */}
                 <div className="text-lg">{person.name}</div>
                 {/* position */}
-                <div className="text-[12px]">{person.position}</div>
+                <div className="text-[12px] uppercase font-extralight tracking-widest">
+                  {person.position}
+                </div>
               </div>
             </div>
             <div>

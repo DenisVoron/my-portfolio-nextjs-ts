@@ -1,12 +1,13 @@
 import TestimonialSlider from "../components/TestimonialSlider";
+import AnimatedTitleTestimonial from "../components/animated/AnimatedTitleTestimonial";
 
 const Testimonials = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center">
       <div className="container mx-auto h-full flex flex-col justify-center">
-        <h2 className="h2 mb-8 xl:mb-0">
+        <AnimatedTitleTestimonial>
           What clients <span className="text-accent">say.</span>
-        </h2>
+        </AnimatedTitleTestimonial>
         {/* slider */}
         <div>
           <TestimonialSlider />

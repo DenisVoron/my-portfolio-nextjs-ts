@@ -11,6 +11,11 @@ swiper-container::part(bullet) {
   background-color: #f13024;
 }
 
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: #f13024;
+}
+
 /* bg-secondary */
 
 @layer base {
