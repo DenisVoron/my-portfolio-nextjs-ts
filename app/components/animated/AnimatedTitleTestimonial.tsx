@@ -5,7 +5,7 @@ import { fadeIn } from "@/app/lib/variant";
 import { motion } from "framer-motion";
 import { type ChildProp } from "@/app/lib/definitions-type";
 
-const AnimatedTitleTestimonial: FC<ChildProp> = ({ children }) => {
+const AnimatedTitleTestimonial: FC<ChildProp> = ({ children }): JSX.Element => {
   return (
     <motion.h2
       variants={fadeIn("up", 0.2)}
