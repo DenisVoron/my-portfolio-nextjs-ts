@@ -1,4 +1,5 @@
 import TestimonialSlider from "../components/TestimonialSlider";
+import AnimatedSliderTestimonial from "../components/animated/AnimatedSliderTestimonial";
 import AnimatedTitleTestimonial from "../components/animated/AnimatedTitleTestimonial";
 
 const Testimonials = () => {
@@ -9,9 +10,9 @@ const Testimonials = () => {
           What clients <span className="text-accent">say.</span>
         </AnimatedTitleTestimonial>
         {/* slider */}
-        <div>
+        <AnimatedSliderTestimonial>
           <TestimonialSlider />
-        </div>
+        </AnimatedSliderTestimonial>
       </div>
     </div>
   );
