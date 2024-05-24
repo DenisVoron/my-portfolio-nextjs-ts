@@ -19,4 +19,5 @@ const AnimatedSliderTestimonial: FC<ChildProp> = ({
     </motion.div>
   );
 };
+
 export default AnimatedSliderTestimonial;

@@ -18,4 +18,5 @@ const AnimatedBtn: FC<ChildProp> = ({ children }): JSX.Element => {
     </motion.div>
   );
 };
+
 export default AnimatedBtn;

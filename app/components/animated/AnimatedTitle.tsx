@@ -18,4 +18,5 @@ const AnimatedTitle: FC<ChildProp> = ({ children }): JSX.Element => {
     </motion.h1>
   );
 };
+
 export default AnimatedTitle;

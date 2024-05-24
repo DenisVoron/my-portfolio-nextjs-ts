@@ -18,4 +18,5 @@ const AnimatedTitleTestimonial: FC<ChildProp> = ({ children }): JSX.Element => {
     </motion.h2>
   );
 };
+
 export default AnimatedTitleTestimonial;
