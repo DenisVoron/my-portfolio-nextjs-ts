@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { Engine, type ISourceOptions } from "@tsparticles/engine";
 
-const ParticlesContainer = () => {
+const ParticlesContainer: FC = (): JSX.Element => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {

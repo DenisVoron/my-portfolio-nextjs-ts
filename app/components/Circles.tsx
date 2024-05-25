@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { FC } from "react";
 
-const Circles = () => {
+const Circles: FC = (): JSX.Element => {
   return (
-    <div className=" w-[200px] xl:w-[300px] absolute right-0 bottom-0 mix-blend-color-dodge animate-pulse duration-75 z-10">
+    <div className="w-[200px] xl:w-[300px] absolute right-0 bottom-0 mix-blend-color-dodge animate-pulse duration-75 z-10">
       <Image
         src={"/circles.png"}
         width={260}
@@ -15,4 +16,3 @@ const Circles = () => {
 };
 
 export default Circles;
-// w-[200px] xl:w-[300px] absolute -right-16 -bottom-2 mix-blend-color-dodge animate-pulse duration-75 z-10

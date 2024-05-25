@@ -1,9 +1,9 @@
 "use client";
 
+import { FC } from "react";
+import { motion } from "framer-motion";
 import { fadeIn } from "@/app/lib/variant";
 import { type ChildProp } from "@/app/lib/definitions-type";
-import { motion } from "framer-motion";
-import { FC } from "react";
 
 const AnimatedTitleAbout: FC<ChildProp> = ({ children }): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ const AnimatedTitleAbout: FC<ChildProp> = ({ children }): JSX.Element => {
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="h2"
+      className="h2 text-2xl"
     >
       {children}
     </motion.h2>

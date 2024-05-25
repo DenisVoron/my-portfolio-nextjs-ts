@@ -1,3 +1,4 @@
+import { FC } from "react";
 import Link from "next/link";
 import {
   RiYoutubeLine,
@@ -8,7 +9,7 @@ import {
   RiPinterestLine,
 } from "react-icons/ri";
 
-const Socials = () => {
+const Socials: FC = (): JSX.Element => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
       <Link href={""} className="hover:text-accent transition-all duration-300">

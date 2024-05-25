@@ -9,7 +9,6 @@ import {
   FaWordpress,
   FaFigma,
 } from "react-icons/fa";
-
 import {
   SiNextdotjs,
   SiFramer,
@@ -108,7 +107,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
   const index = Number(searchParams?.tab) || 0;
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 py-28 text-center xl:text-left">
       <Circles />
       <AnimatedAvatarAbout>
         <Avatar />
@@ -146,7 +145,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
           </AnimatedCountsAbout>
         </div>
         <AnimatedLinkExperience>
-          <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-3">
             {aboutData.map((item, index) => (
               <AboutNavLink key={item.title} title={item.title} index={index} />
             ))}
@@ -159,9 +158,11 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
                     key={itemIndex}
                     className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                   >
-                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="font-light text-sm md:text-base mb-2 md:mb-0">
+                      {item.title}
+                    </div>
                     <div className="hidden md:flex">-</div>
-                    <div>{item.stage}</div>
+                    <div className="text-sm md:text-base">{item.stage}</div>
                   </div>
                 );
               }

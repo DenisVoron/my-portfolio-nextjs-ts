@@ -8,8 +8,9 @@ import Transition from "../Transition";
 
 const Animated: FC<ChildProp> = ({ children }): JSX.Element => {
   const pathname = usePathname();
+
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <motion.div key={pathname} className="h-full">
         <Transition />
         {children}

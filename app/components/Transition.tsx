@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { motion } from "framer-motion";
 
 const transitionVariants = {
@@ -10,12 +11,12 @@ const transitionVariants = {
     width: "0%",
   },
   exit: {
-    x: ["0%", "100%"],
-    width: ["0%", "100%"],
+    x: ["100%", "0%"],
+    width: ["100%", "0%"],
   },
 };
 
-const Transition = () => {
+const Transition: FC = (): JSX.Element => {
   return (
     <>
       <motion.div
