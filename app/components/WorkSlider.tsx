@@ -73,12 +73,9 @@ const WorkSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="h-[180px] sm:h-[290px] lg:h-[440px]">
+    <swiper-container class="h-[200px] sm:w-[560px] sm:h-[320px] lg:w-full lg:h-[440px]">
       {workSlides.slides.map((slide, index) => (
-        <swiper-slide
-          key={index}
-          style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
-        >
+        <swiper-slide key={index} style={{}}>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
             {slide.images.map((image, index) => (
               <div
@@ -121,3 +118,5 @@ const WorkSlider: FC = (): JSX.Element => {
 };
 
 export default WorkSlider;
+
+// style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
