@@ -12,7 +12,7 @@ const AnimatedTitleContact: FC<ChildProp> = ({ children }): JSX.Element => {
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="h2 text-center mb-10"
+      className="text-3xl md:text-4xl lg:h2 text-center mb-4 lg:mb-10"
     >
       {children}
     </motion.h2>

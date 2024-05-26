@@ -34,8 +34,8 @@ const Home: FC = (): JSX.Element => {
       {/* Image */}
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
         {/* {bg-image} */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
-        <ParticlesContainer />
+        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-10"></div>
+        {/* <ParticlesContainer /> */}
         <AnimatedAvatar>
           <Avatar />
         </AnimatedAvatar>

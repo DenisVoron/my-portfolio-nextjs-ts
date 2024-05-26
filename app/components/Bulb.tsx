@@ -9,7 +9,7 @@ const Bulb: FC = (): JSX.Element => {
         width={260}
         height={200}
         alt="bulb decoration"
-        className="w-full h-full"
+        className="w-auto"
       />
     </div>
   );

@@ -10,6 +10,7 @@ const TopLeftImg: FC = (): JSX.Element => {
         alt="top-left-image"
         width={400}
         height={400}
+        className="w-auto"
       />
     </div>
   );

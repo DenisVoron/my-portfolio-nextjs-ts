@@ -22,11 +22,19 @@ const Contact: FC = (): JSX.Element => {
               <input
                 type="text"
                 placeholder="name"
-                className="input mb-5 md:mb-0"
+                className="input h-12 md:h-14 mb-5 md:mb-0"
               />
-              <input type="text" placeholder="email" className="input" />
+              <input
+                type="text"
+                placeholder="email"
+                className="input h-12 md:h-14"
+              />
             </div>
-            <input type="text" placeholder="subject" className="input" />
+            <input
+              type="text"
+              placeholder="subject"
+              className="input h-12 md:h-14"
+            />
             <textarea placeholder="message" className="textarea"></textarea>
             <button
               type="button"

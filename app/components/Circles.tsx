@@ -9,7 +9,8 @@ const Circles: FC = (): JSX.Element => {
         width={260}
         height={200}
         alt="image circles"
-        className="w-full h-full"
+        className="w-auto"
+        priority={false}
       />
     </div>
   );

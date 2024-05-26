@@ -14,7 +14,7 @@ const AnimatedDescrServicesAndWork: FC<ChildProp> = ({
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+      className="lg:mb-4 text-sm lg:text-2xl max-w-[400px] mx-auto lg:mx-0"
     >
       {children}
     </motion.p>
