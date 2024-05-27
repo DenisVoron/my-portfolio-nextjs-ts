@@ -73,9 +73,9 @@ const WorkSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="h-[200px] sm:w-[560px] sm:h-[320px] lg:w-full lg:h-[440px]">
+    <swiper-container class="h-[200px] sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[640px] lg:h-[380px]">
       {workSlides.slides.map((slide, index) => (
-        <swiper-slide key={index} style={{}}>
+        <swiper-slide key={index}>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
             {slide.images.map((image, index) => (
               <div
@@ -89,6 +89,8 @@ const WorkSlider: FC = (): JSX.Element => {
                     width={380}
                     height={240}
                     alt="image work"
+                    className="w-auto h-auto"
+                    priority={false}
                   />
                   {/* overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
@@ -118,5 +120,3 @@ const WorkSlider: FC = (): JSX.Element => {
 };
 
 export default WorkSlider;
-
-// style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}

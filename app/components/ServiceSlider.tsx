@@ -76,7 +76,7 @@ const ServiceSlider: FC = (): JSX.Element => {
       {serviceData.map((item, index) => (
         <swiper-slide
           key={index}
-          style={{ backgroundColor: "rgba(65, 47, 123, 0.15) " }}
+          style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
         >
           <div className="h-max rounded-lg px-6 py-5 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
             <div className="text-base sm:text-lg text-accent mb-3">
@@ -98,6 +98,3 @@ const ServiceSlider: FC = (): JSX.Element => {
 };
 
 export default ServiceSlider;
-
-
-// https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading
