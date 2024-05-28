@@ -14,7 +14,7 @@ const AnimatedTitleServiceAndWork: FC<ChildProp> = ({
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="text-4xl xl:h2 mb-2 xl:mt-12"
+      className="text-4xl xl:h2 mb-2 xl:mt-1"
     >
       {children}
     </motion.h2>
