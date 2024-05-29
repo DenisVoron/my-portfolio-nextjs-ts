@@ -10,17 +10,9 @@ const Header: FC = (): JSX.Element => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-6 xl:py-8">
           <Link href="/">
             <Image
-              src={"/logo-2.png"}
-              width={220}
-              height={48}
-              alt="logo image"
-              priority={true}
-              className="w-auto h-auto"
-            />
-            <Image
-              src={"/logo.svg"}
-              width={220}
-              height={48}
+              src={"/logo.png"}
+              width={250}
+              height={68}
               alt="logo image"
               priority={true}
               className="w-auto h-auto"

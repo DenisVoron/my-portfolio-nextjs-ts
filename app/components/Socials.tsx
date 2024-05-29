@@ -1,34 +1,42 @@
 import { FC } from "react";
 import Link from "next/link";
 import {
-  RiYoutubeLine,
-  RiInstagramLine,
-  RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
-} from "react-icons/ri";
+  FaPhoneAlt,
+  FaMapMarkedAlt,
+  FaViber,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Socials: FC = (): JSX.Element => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiYoutubeLine />
+      <div className="hover:after:content-['+38(067)446-46-67'] after:flex hover:text-accent transition-all duration-300">
+        <FaPhoneAlt />
+      </div>
+      <div className="hover:after:content-['Ukraine.Kyiv.str.Verbytsky'] after:flex hover:text-accent transition-all duration-300">
+        <FaMapMarkedAlt />
+      </div>
+      <Link
+        href="viber://add?number=380674464667"
+        className="hover:text-accent transition-all duration-300"
+        title="send me viber"
+      >
+        <FaViber />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiInstagramLine />
+      <Link
+        href={"https://www.linkedin.com/in/denis-voronko-9495a9264"}
+        target="_blank"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <FaLinkedin />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiFacebookLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiBehanceLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine />
+      <Link
+        href={"https://github.com/DenisVoron"}
+        target="_blank"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <FaGithub />
       </Link>
     </div>
   );
