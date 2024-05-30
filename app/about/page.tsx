@@ -1,20 +1,25 @@
 import { FC } from "react";
-
 // icons
 import {
   FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
+  FaVuejs,
   FaFigma,
+  FaNode,
+  FaSass,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
   SiAdobephotoshop,
+  SiTsnode,
+  SiTypescript,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
+import { PiFileSql } from "react-icons/pi";
 
 import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-type";
 import Avatar from "../components/Avatar";
@@ -35,20 +40,31 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 key={"FaHtml5"} />,
-          <FaCss3 key={"FaCss3"} />,
-          <FaJs key={"FaJs"} />,
-          <FaReact key={"FaReact"} />,
-          <SiNextdotjs key={"SiNextdotjs"} />,
-          <SiFramer key={"SiFramer"} />,
-          <FaWordpress key={"FaWordpress"} />,
+          <FaHtml5 key={"FaHtml5"} title="HTML5" />,
+          <FaCss3 key={"FaCss3"} title="CSS" />,
+          <FaSass key={"FaSass"} title="Sass" />,
+          <FaJs key={"FaJs"} title="javaScript" />,
+          <FaReact key={"FaReact"} title="React" />,
+          <FaVuejs key={"FaVuejs"} title="Vue.js" />,
+          <SiTypescript key={"SiTypescript"} title="TypeScript" />,
+          <SiNextdotjs key={"SiNextdotjs"} title="NEXT.js" />,
+          <SiFramer key={"SiFramer"} title="framer-motion" />,
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "Back End Development",
+        icons: [
+          <FaNode key={"FaNode"} />,
+          <SiTsnode key={"SiTsnode"} title="Node ts" />,
+          <SiMongodb key={"SiMongodb"} />,
+          <SiPostgresql key={"SiPostgresql"} />,
+          <PiFileSql key={"PiFileSql"} title="sql" />,
+        ],
+      },
+      {
+        title: "Design",
         icons: [
           <FaFigma key={"FaFigma"} />,
-          <SiAdobexd key={"SiAdobexd"} />,
           <SiAdobephotoshop key={"SiAdobephotoshop"} />,
         ],
       },

@@ -23,7 +23,7 @@ const AboutNavLink: FC<PropAboutLink> = ({ title, index }): JSX.Element => {
     replace(`${pathname}?${params.toString()}`);
   };
 
-  const stringParams = searchParams.get("me")?.toString() || "";
+  const stringParams = searchParams.get("me")?.toString() || "skills";
 
   return (
     <div
