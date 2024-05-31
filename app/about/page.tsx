@@ -18,6 +18,7 @@ import {
   SiTypescript,
   SiMongodb,
   SiPostgresql,
+  SiTailwindcss,
 } from "react-icons/si";
 import { PiFileSql } from "react-icons/pi";
 
@@ -48,6 +49,7 @@ const aboutData = [
           <FaReact key={"FaReact"} title="React" />,
           <FaVuejs key={"FaVuejs"} title="Vue.js" />,
           <SiTypescript key={"SiTypescript"} title="TypeScript" />,
+          <SiTailwindcss key={"SiTailwindcss"} title="Tailwind-css" />,
           <SiFramer key={"SiFramer"} title="framer-motion" />,
         ],
       },
@@ -67,19 +69,6 @@ const aboutData = [
           <FaFigma key={"FaFigma"} />,
           <SiAdobephotoshop key={"SiAdobephotoshop"} />,
         ],
-      },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
       },
     ],
   },
@@ -131,8 +120,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
           <AnimatedTitleAbout>
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Do what <span className="text-accent"> you</span> love!
           </AnimatedTitleAbout>
           <AnimatedDescrAbout>
             10 years ago, I began freelancing as a developer. Since then, I`ve

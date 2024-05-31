@@ -20,7 +20,7 @@ const Home: FC = (): JSX.Element => {
           {/* {subtitle} */}
           <AnimatedText>
             {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam facere optio ex fuga quae."
+              "The Internet has been made so well that many people think of it as a natural resource like the Pacific Ocean, rather than something man-made. When was the last time a technology of this scale worked flawlessly? The web is a joke compared to that. The web was made by amateurs."
             }
           </AnimatedText>
           <div className="flex justify-center xl:hidden relative">

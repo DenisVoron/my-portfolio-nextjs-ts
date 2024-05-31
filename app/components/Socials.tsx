@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   FaPhoneAlt,
   FaMapMarkedAlt,
+  FaEnvelope,
   FaViber,
   FaGithub,
   FaLinkedin,
@@ -11,14 +12,24 @@ import {
 const Socials: FC = (): JSX.Element => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <div className="hover:after:content-['+38(067)446-46-67'] after:flex hover:text-accent transition-all duration-300">
+      <Link
+        href={"tel:+38(067)446-46-67"}
+        className="hover:after:content-['+38(067)446-46-67'] after:flex hover:text-accent transition-all duration-300"
+      >
         <FaPhoneAlt />
-      </div>
+      </Link>
       <div className="hover:after:content-['Ukraine.Kyiv.str.Verbytsky'] after:flex hover:text-accent transition-all duration-300">
         <FaMapMarkedAlt />
       </div>
       <Link
-        href="viber://add?number=380674464667"
+        href={"mailto:denis.voronko@gmail.com"}
+        className="hover:text-accent transition-all duration-300"
+        title="send me mail"
+      >
+        <FaEnvelope />
+      </Link>
+      <Link
+        href="http://viber://add?number=380674464667"
         className="hover:text-accent transition-all duration-300"
         title="send me viber"
       >
