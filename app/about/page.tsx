@@ -45,10 +45,10 @@ const aboutData = [
           <FaCss3 key={"FaCss3"} title="CSS" />,
           <FaSass key={"FaSass"} title="Sass" />,
           <FaJs key={"FaJs"} title="javaScript" />,
+          <SiTypescript key={"SiTypescript"} title="TypeScript" />,
           <SiNextdotjs key={"SiNextdotjs"} title="NEXT.js" />,
           <FaReact key={"FaReact"} title="React" />,
           <FaVuejs key={"FaVuejs"} title="Vue.js" />,
-          <SiTypescript key={"SiTypescript"} title="TypeScript" />,
           <SiTailwindcss key={"SiTailwindcss"} title="Tailwind-css" />,
           <SiFramer key={"SiFramer"} title="framer-motion" />,
         ],
@@ -76,33 +76,29 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Full stack developer - GoIt",
+        stage: "2022 - 2023",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Online store owner - EliteNail",
+        stage: "2015 - Now",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Media buyer in advertising agency",
+        stage: "2007 - 2014",
       },
     ],
   },
   {
-    title: "credentials",
+    title: "study",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Fullstack developer courses - GoIt school",
+        stage: "2022 - 2023",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "National Transport University",
+        stage: "2007 - 2011",
       },
     ],
   },
