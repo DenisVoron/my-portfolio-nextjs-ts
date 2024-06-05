@@ -8,9 +8,9 @@ const TopLeftImg: FC = (): JSX.Element => {
         src={"/top-left-img.png"}
         width={400}
         height={400}
-        className="w-auto h-auto"
         alt="top-left-image"
         priority={true}
+        className="w-auto h-auto"
       />
     </div>
   );

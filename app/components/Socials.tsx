@@ -11,7 +11,7 @@ import {
 
 const Socials: FC = (): JSX.Element => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-sm md:text-lg">
       <Link
         href={"tel:+38(067)446-46-67"}
         className="hover:after:content-['+38(067)446-46-67'] after:flex hover:text-accent transition-all duration-300"

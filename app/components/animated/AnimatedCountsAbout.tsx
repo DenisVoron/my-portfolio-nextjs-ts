@@ -12,7 +12,7 @@ const AnimatedCountsAbout: FC<ChildProp> = ({ children }): JSX.Element => {
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+      className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-6"
     >
       {children}
     </motion.div>

@@ -108,7 +108,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
   const index = Number(searchParams?.tab) || 0;
 
   return (
-    <div className="h-full bg-primary/30 py-28 text-center xl:text-left">
+    <div className="h-full bg-primary/30 py-24 text-center xl:text-left">
       <Circles />
       <AnimatedAvatarAbout>
         <Avatar />
@@ -119,9 +119,23 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
             Do what <span className="text-accent"> you</span> love!
           </AnimatedTitleAbout>
           <AnimatedDescrAbout>
-            10 years ago, I began freelancing as a developer. Since then, I`ve
-            done remote work for agencies, counsulted for startaps, and
-            collaborated on digital products for business and consumer use.
+            Two years ago, my path in the field of IT - Full Stack developer
+            began. <span className=" text-accent">Why exactly IT?</span> At one
+            of the stages of my commercial life, an online store appeared. Over
+            time, there was a desire to improve something, to replace something.
+            Probably, it would have been easier to hire some specialist, but I
+            wanted to figure out what was what.... I started to learn HTML and
+            CSS on my own, I started to understand programming languages ​​and
+            their frameworks. But today there are so many programming languages
+            ​​that I was confused about which technology does what. The decision
+            was to go to the courses in order to gain basic knowledge on the
+            basis of which it will be easier to form your further technology
+            stack. <span className="text-accent">Why javaScript?</span> In
+            general, my desire was to understand how WEB works in general. After
+            surfing a little on the Internet, found out that JS is not difficult
+            for a beginner and a lot of products are created using this
+            programming language. I liked JavaScript, but when I met React I
+            fell in love with programming...
           </AnimatedDescrAbout>
           <AnimatedCountsAbout>
             <div className=" flex flex-1 xl:gap-x-6">
@@ -145,7 +159,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
           </AnimatedCountsAbout>
         </div>
         <AnimatedLinkExperience>
-          <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-3">
+          <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-5">
             {aboutData.map((item, index) => (
               <AboutNavLink key={item.title} title={item.title} index={index} />
             ))}
@@ -172,11 +186,16 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
                     key={itemIndex}
                     className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                   >
-                    <div>{item.title}</div>
+                    <div className="font-light text-sm md:text-base mb-2 md:mb-0">
+                      {item.title}
+                    </div>
                     <div className="hidden md:flex">-</div>
                     <div className="flex gap-x-4">
                       {item.icons.map((icon, index) => (
-                        <div key={index} className="text-2xl text-white">
+                        <div
+                          key={index}
+                          className="text-base md:text-2xl text-white"
+                        >
                           {icon}
                         </div>
                       ))}
