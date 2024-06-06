@@ -14,11 +14,11 @@ const Socials: FC = (): JSX.Element => {
     <div className="flex items-center gap-x-5 text-sm md:text-lg">
       <Link
         href={"tel:+38(067)446-46-67"}
-        className="hover:after:content-['+38(067)446-46-67'] after:flex hover:text-accent transition-all duration-300"
+        className="hover:after:content-['+38(067)446-46-67'] after:text-xs sm:after:text-base after:absolute after:top-[42px] after:right-[11rem] sm:after:top-14 sm:after:right-[31rem] hover:text-accent transition-all duration-300"
       >
         <FaPhoneAlt />
       </Link>
-      <div className="hover:after:content-['Ukraine.Kyiv.str.Verbytsky'] after:flex hover:text-accent transition-all duration-300">
+      <div className="hover:after:content-['Ukraine.Kyiv.str.Verbytsky'] after:text-xs sm:after:text-base after:absolute after:top-[42px] after:right-[9rem] sm:after:top-14 sm:after:right-[31rem] hover:text-accent transition-all duration-300">
         <FaMapMarkedAlt />
       </div>
       <Link

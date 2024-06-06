@@ -114,7 +114,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
         <Avatar />
       </AnimatedAvatarAbout>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center sm:mt-1 lg:mt-0">
           <AnimatedTitleAbout>
             Do what <span className="text-accent"> you</span> love!
           </AnimatedTitleAbout>

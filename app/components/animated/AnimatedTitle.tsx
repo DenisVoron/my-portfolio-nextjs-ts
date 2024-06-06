@@ -12,7 +12,7 @@ const AnimatedTitle: FC<ChildProp> = ({ children }): JSX.Element => {
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="text-3xl mb-3.5 md:h2 md:mb-0"
+      className="text-2xl mb-3.5 md:text-4xl"
     >
       {children}
     </motion.h1>
