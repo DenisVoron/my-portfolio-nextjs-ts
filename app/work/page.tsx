@@ -2,9 +2,9 @@ import { FC } from "react";
 import WorkSlider from "@/app/components/WorkSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
-import AnimatedTitleServiceAndWork from "../components/animated/AnimatedTitleServicesAndWork";
-import AnimatedDescrServicesAndWork from "../components/animated/AnimatedDescrServicesAndWork";
-import AnimatedSliderServicesAndWork from "../components/animated/AnimatedSliderServicesAndWork";
+import AnimatedTitleServiceAndWork from "../components/animated/AnimatedTitlePracticeAndWork";
+import AnimatedDescrServicesAndWork from "../components/animated/AnimatedDescrPracticeAndWork";
+import AnimatedSliderServicesAndWork from "../components/animated/AnimatedSliderPractiseAndWork";
 
 const Work: FC = (): JSX.Element => {
   return (
