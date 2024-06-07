@@ -28,6 +28,10 @@ const ParticlesContainer: FC = (): JSX.Element => {
       fpsLimit: 120,
       interactivity: {
         events: {
+          onClick: {
+            enable: false,
+            mode: "push",
+          },
           onHover: {
             enable: true,
             mode: "repulse",
@@ -64,7 +68,7 @@ const ParticlesContainer: FC = (): JSX.Element => {
             default: "bounce",
           },
           random: false,
-          speed: 2,
+          speed: 1,
           straight: false,
         },
         number: {
@@ -72,7 +76,7 @@ const ParticlesContainer: FC = (): JSX.Element => {
             enable: true,
             area: 800,
           },
-          value: 180,
+          value: 80,
         },
         opacity: {
           value: 0.5,
@@ -91,7 +95,7 @@ const ParticlesContainer: FC = (): JSX.Element => {
 
   return init ? (
     <Particles
-      className=" w-full h-full absolute translate-z-0"
+      className="w-full h-full absolute translate-z-0"
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
