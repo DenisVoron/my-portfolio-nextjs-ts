@@ -11,20 +11,15 @@ import {
   RxDesktop,
   RxReader,
   RxRocket,
-  RxArrowTopRight,
 } from "react-icons/rx";
 
 // data
 const practiceData = [
   {
     icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "I have been using Photoshop since 2010. Figma since 2022 ",
+    title: "Soft skills",
+    description:
+      "Time management. Analysis and decisionmaking. Self motivation. Punctuality. Information seeking.",
   },
   {
     icon: <RxDesktop />,
@@ -39,9 +34,15 @@ const practiceData = [
       "Node.js since 2022. SQL since 2024. MongoDB since 2022. PostgreSQL since 2024.",
   },
   {
+    icon: <RxPencil2 />,
+    title: "Design",
+    description: "I have been using Photoshop since 2010. Figma since 2022 ",
+  },
+  {
     icon: <RxRocket />,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "I have experience in internal optimization of pages for organic search in search engines.",
   },
 ];
 
