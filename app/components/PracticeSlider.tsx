@@ -24,17 +24,19 @@ const practiceData = [
   {
     icon: <RxPencil2 />,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "I have been using Photoshop since 2010. Figma since 2022 ",
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Frontend",
+    description:
+      "JavaScript since 2022. TypeScript since 2023. React since 2022. Next.js since 2024.",
   },
   {
     icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Backend",
+    description:
+      "Node.js since 2022. SQL since 2024. MongoDB since 2022. PostgreSQL since 2024.",
   },
   {
     icon: <RxRocket />,
@@ -85,10 +87,7 @@ const PracticeSlider: FC = (): JSX.Element => {
             {/* title & desc */}
             <div className="mb-8">
               <div className="mb-2 text-base">{item.title}</div>
-              <p className="text-sm sm:text-base">{item.description}</p>
-            </div>
-            <div className="text-2xl">
-              <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
+              <p className="text-sm lg:text-base">{item.description}</p>
             </div>
           </div>
         </swiper-slide>
