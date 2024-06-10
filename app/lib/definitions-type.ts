@@ -52,4 +52,18 @@ type DataWithStage = {
   stage: string;
 };
 
+export type ImageObj = {
+  title: string;
+  path: string;
+  link: string;
+};
+
+export type ImagesArr = {
+  images: ImageObj[];
+};
+
+export type SlidesTypes = {
+  slides: ImagesArr[];
+};
+
 export type UnitedDataTyp = DataWithIcon | DataWithStage;

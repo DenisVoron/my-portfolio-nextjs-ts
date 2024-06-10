@@ -8,27 +8,33 @@ import { Pagination } from "swiper/modules";
 
 // icons
 import { BsArrowRight } from "react-icons/bs";
+//type
+import type { ImageObj, ImagesArr, SlidesTypes } from "../lib/definitions-type";
 
 // data
-const workSlides = {
+const workSlides: SlidesTypes = {
   slides: [
     {
       images: [
         {
-          title: "title",
+          title: "Powered by HTML, CSS",
           path: "/thumb1.jpg",
+          link: "https://denisvoron.github.io/icecream-project/",
         },
         {
           title: "title",
           path: "/thumb2.jpg",
+          link: "",
         },
         {
           title: "title",
           path: "/thumb3.jpg",
+          link: "",
         },
         {
           title: "title",
           path: "/thumb4.jpg",
+          link: "",
         },
       ],
     },
@@ -37,18 +43,22 @@ const workSlides = {
         {
           title: "title",
           path: "/thumb4.jpg",
+          link: "",
         },
         {
-          title: "title",
+          title: "Powered by HTML, CSS",
           path: "/thumb1.jpg",
+          link: "https://denisvoron.github.io/icecream-project/",
         },
         {
           title: "title",
           path: "/thumb2.jpg",
+          link: "",
         },
         {
           title: "title",
           path: "/thumb3.jpg",
+          link: "",
         },
       ],
     },
@@ -75,10 +85,10 @@ const WorkSlider: FC = (): JSX.Element => {
 
   return (
     <swiper-container class="sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[550px] lg:h-[325px] xl:w-[740px] xl:h-[430px]">
-      {workSlides.slides.map((slide, index) => (
+      {workSlides.slides.map((slide: ImagesArr, index: number) => (
         <swiper-slide key={index}>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-            {slide.images.map((image, index) => (
+            {slide.images.map((image: ImageObj, index: number) => (
               <div
                 key={index}
                 className="relative rounded-lg md:rounded-lg overflow-hidden flex items-center justify-center group"
@@ -98,15 +108,12 @@ const WorkSlider: FC = (): JSX.Element => {
                   {/* title */}
                   <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                     <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                      <Link
-                        href={"https://denisvoron.github.io/icecream-project/"}
-                        target="_blank"
-                      >
+                      <Link href={image.link} target="_blank">
                         {/* title part one */}
-                        <div className="delay-100">LIVE</div>
+                        <div className="delay-100">{image.title}</div>
                         {/* title part two */}
                         <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                          PROJECT
+                          LIVE PROJECT
                         </div>
                         {/* icon */}
                         <div className=" text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
