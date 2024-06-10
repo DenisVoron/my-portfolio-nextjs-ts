@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
 import { Pagination } from "swiper/modules";
@@ -73,7 +74,7 @@ const WorkSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="h-[200px] sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[640px] lg:h-[380px]">
+    <swiper-container class="sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[550px] lg:h-[325px] xl:w-[740px] xl:h-[430px]">
       {workSlides.slides.map((slide, index) => (
         <swiper-slide key={index}>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
@@ -97,16 +98,21 @@ const WorkSlider: FC = (): JSX.Element => {
                   {/* title */}
                   <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                     <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                      {/* title part one */}
-                      <div className="delay-100">LIVE</div>
-                      {/* title part two */}
-                      <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                        PROJECT
-                      </div>
-                      {/* icon */}
-                      <div className=" text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                        <BsArrowRight />
-                      </div>
+                      <Link
+                        href={"https://denisvoron.github.io/icecream-project/"}
+                        target="_blank"
+                      >
+                        {/* title part one */}
+                        <div className="delay-100">LIVE</div>
+                        {/* title part two */}
+                        <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                          PROJECT
+                        </div>
+                        {/* icon */}
+                        <div className=" text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <BsArrowRight />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>

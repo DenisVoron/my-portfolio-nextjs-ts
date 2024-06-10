@@ -2,9 +2,9 @@ import { FC } from "react";
 import WorkSlider from "@/app/components/WorkSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
-import AnimatedTitleServiceAndWork from "../components/animated/AnimatedTitlePracticeAndWork";
-import AnimatedDescrServicesAndWork from "../components/animated/AnimatedDescrPracticeAndWork";
-import AnimatedSliderServicesAndWork from "../components/animated/AnimatedSliderPractiseAndWork";
+import AnimatedTitlePracticeAndWork from "../components/animated/AnimatedTitlePracticeAndWork";
+import AnimatedDescrPracticeAndWork from "../components/animated/AnimatedDescrPracticeAndWork";
+import AnimatedSliderPractiseAndWork from "../components/animated/AnimatedSliderPractiseAndWork";
 
 const Work: FC = (): JSX.Element => {
   return (
@@ -12,20 +12,17 @@ const Work: FC = (): JSX.Element => {
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
-            <AnimatedTitleServiceAndWork>
+          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 mt-5 xl:mb-0">
+            <AnimatedTitlePracticeAndWork>
               My work <span className="text-accent">.</span>
-            </AnimatedTitleServiceAndWork>
-            <AnimatedDescrServicesAndWork>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ab
-              deleniti maxime quae cupiditate facilis eaque quibusdam qui, ipsa
-              nisi.
-            </AnimatedDescrServicesAndWork>
+            </AnimatedTitlePracticeAndWork>
+            {/* description */}
+            <AnimatedDescrPracticeAndWork />
           </div>
           {/* slider */}
-          <AnimatedSliderServicesAndWork>
+          <AnimatedSliderPractiseAndWork>
             <WorkSlider />
-          </AnimatedSliderServicesAndWork>
+          </AnimatedSliderPractiseAndWork>
         </div>
       </div>
       <Bulb />
