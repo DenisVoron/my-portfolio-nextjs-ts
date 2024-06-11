@@ -22,14 +22,14 @@ const workSlides: SlidesTypes = {
           link: "https://denisvoron.github.io/icecream-project/",
         },
         {
-          title: "title",
+          title: "Powered by javaScript and libraries",
           path: "/thumb2.jpg",
-          link: "",
+          link: "https://denisvoron.github.io/filmoteka-project/",
         },
         {
-          title: "title",
+          title: "Powered by Node.js, Express.js, React",
           path: "/thumb3.jpg",
-          link: "",
+          link: "https://github.com/DenisVoron/backend-pets-project",
         },
         {
           title: "title",
@@ -51,14 +51,14 @@ const workSlides: SlidesTypes = {
           link: "https://denisvoron.github.io/icecream-project/",
         },
         {
-          title: "title",
+          title: "Powered by javaScript and libraries",
           path: "/thumb2.jpg",
-          link: "",
+          link: "https://denisvoron.github.io/filmoteka-project/",
         },
         {
-          title: "title",
+          title: "Powered by Node.js, Express.js, React",
           path: "/thumb3.jpg",
-          link: "",
+          link: "https://github.com/DenisVoron/backend-pets-project",
         },
       ],
     },
@@ -84,7 +84,7 @@ const WorkSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[550px] lg:h-[325px] xl:w-[740px] xl:h-[430px]">
+    <swiper-container class="sm:w-[560px] sm:h-[320px] md:h-[330px] lg:w-[550px] lg:h-[325px] xl:w-[740px] xl:h-[430px] xl:mt-24">
       {workSlides.slides.map((slide: ImagesArr, index: number) => (
         <swiper-slide key={index}>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">

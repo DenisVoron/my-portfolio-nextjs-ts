@@ -75,7 +75,7 @@ const PracticeSlider: FC = (): JSX.Element => {
   }, []);
 
   return (
-    <swiper-container class="h-[180px] sm:h-[220px]">
+    <swiper-container class="h-[180px] sm:h-[220px] xl:mt-24">
       {practiceData.map((item, index) => (
         <swiper-slide
           key={index}
