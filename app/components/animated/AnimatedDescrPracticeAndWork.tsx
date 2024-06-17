@@ -3,9 +3,8 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/app/lib/variant";
-import { ChildProp } from "@/app/lib/definitions-type";
 
-const AnimatedDescrPracticeAndWork: FC<ChildProp> = (): JSX.Element => (
+const AnimatedDescrPracticeAndWork: FC = (): JSX.Element => (
   <motion.p
     variants={fadeIn("up", 0.4)}
     initial="hidden"

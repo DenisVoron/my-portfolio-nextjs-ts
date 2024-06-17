@@ -22,28 +22,28 @@ const workSlides: SlidesTypes = {
           link: "https://denisvoron.github.io/icecream-project/",
         },
         {
-          title: "Powered by javaScript and libraries",
+          title: "Powered by JS and libraries",
           path: "/thumb2.jpg",
           link: "https://denisvoron.github.io/filmoteka-project/",
         },
         {
-          title: "Powered by Node.js, Express.js, React",
+          title: "Powered by Node.js, React",
           path: "/thumb3.jpg",
           link: "https://github.com/DenisVoron/backend-pets-project",
         },
         {
-          title: "title",
+          title: "Powered by React, libraries",
           path: "/thumb4.jpg",
-          link: "",
+          link: "https://denisvoron.github.io/kids-contact-book",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
+          title: "Powered by React, libraries",
           path: "/thumb4.jpg",
-          link: "",
+          link: "https://denisvoron.github.io/kids-contact-book",
         },
         {
           title: "Powered by HTML, CSS",
@@ -51,12 +51,12 @@ const workSlides: SlidesTypes = {
           link: "https://denisvoron.github.io/icecream-project/",
         },
         {
-          title: "Powered by javaScript and libraries",
+          title: "Powered by JS and libraries",
           path: "/thumb2.jpg",
           link: "https://denisvoron.github.io/filmoteka-project/",
         },
         {
-          title: "Powered by Node.js, Express.js, React",
+          title: "Powered by Node.js, React",
           path: "/thumb3.jpg",
           link: "https://github.com/DenisVoron/backend-pets-project",
         },

@@ -22,7 +22,13 @@ import {
 } from "react-icons/si";
 import { PiFileSql } from "react-icons/pi";
 
-import { ISearchParamsProp, UnitedDataTyp } from "../lib/definitions-type";
+import type {
+  ISearchParamsProp,
+  IconAboutData,
+  StageAboutData,
+  TypeAboutData,
+  UnitedDataTyp,
+} from "../lib/definitions-type";
 import Avatar from "../components/Avatar";
 import Circles from "../components/Circles";
 import AnimatedAvatarAbout from "../components/animated/AnimatedAvatarAbout";
@@ -34,7 +40,7 @@ import AnimatedCountsAbout from "../components/animated/AnimatedCountsAbout";
 import AnimatedLinkExperience from "../components/animated/AnimatedLinkExperience";
 
 //  data
-const aboutData = [
+const aboutData: TypeAboutData = [
   {
     title: "skills",
     info: [
@@ -118,25 +124,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
           <AnimatedTitleAbout>
             Do what <span className="text-accent"> you</span> love!
           </AnimatedTitleAbout>
-          <AnimatedDescrAbout>
-            Two years ago, my path in the field of IT - Full Stack developer
-            began. <span className=" text-accent">Why exactly IT?</span> At one
-            of the stages of my commercial life, an online store appeared. Over
-            time, there was a desire to improve something, to replace something.
-            Probably, it would have been easier to hire some specialist, but I
-            wanted to figure out what was what.... I started to learn HTML and
-            CSS on my own, I started to understand programming languages ​​and
-            their frameworks. But today there are so many programming languages
-            ​​that I was confused about which technology does what. The decision
-            was to go to the courses in order to gain basic knowledge on the
-            basis of which it will be easier to form your further technology
-            stack. <span className="text-accent">Why javaScript?</span> In
-            general, my desire was to understand how WEB works in general. After
-            surfing a little on the Internet, found out that JS is not difficult
-            for a beginner and a lot of products are created using this
-            programming language. I liked JavaScript, but when I met React I
-            fell in love with programming...
-          </AnimatedDescrAbout>
+          <AnimatedDescrAbout />
           <AnimatedCountsAbout>
             <div className=" flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
@@ -160,50 +148,58 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
         </div>
         <AnimatedLinkExperience>
           <div className="flex gap-x-1 xl:gap-x-8 mx-auto xl:mx-0 mb-5">
-            {aboutData.map((item, index) => (
-              <AboutNavLink key={item.title} title={item.title} index={index} />
-            ))}
+            {aboutData.map(
+              (item: IconAboutData | StageAboutData, index: number) => (
+                <AboutNavLink
+                  key={item.title}
+                  title={item.title}
+                  index={index}
+                />
+              )
+            )}
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item: UnitedDataTyp, itemIndex) => {
-              if ("stage" in item) {
-                return (
-                  <div
-                    key={itemIndex}
-                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
-                  >
-                    <div className="font-light text-sm md:text-base mb-2 md:mb-0">
-                      {item.title}
+            {aboutData[index].info.map(
+              (item: UnitedDataTyp, itemIndex: number) => {
+                if ("stage" in item) {
+                  return (
+                    <div
+                      key={itemIndex}
+                      className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                    >
+                      <div className="font-light text-sm md:text-base mb-2 md:mb-0">
+                        {item.title}
+                      </div>
+                      <div className="hidden md:flex">-</div>
+                      <div className="text-sm md:text-base">{item.stage}</div>
                     </div>
-                    <div className="hidden md:flex">-</div>
-                    <div className="text-sm md:text-base">{item.stage}</div>
-                  </div>
-                );
+                  );
+                }
+                if ("icons" in item) {
+                  return (
+                    <div
+                      key={itemIndex}
+                      className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                    >
+                      <div className="font-light text-sm md:text-base mb-2 md:mb-0">
+                        {item.title}
+                      </div>
+                      <div className="hidden md:flex">-</div>
+                      <div className="flex gap-x-4">
+                        {item.icons.map((icon, index) => (
+                          <div
+                            key={index}
+                            className="text-base md:text-2xl text-white"
+                          >
+                            {icon}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
               }
-              if ("icons" in item) {
-                return (
-                  <div
-                    key={itemIndex}
-                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
-                  >
-                    <div className="font-light text-sm md:text-base mb-2 md:mb-0">
-                      {item.title}
-                    </div>
-                    <div className="hidden md:flex">-</div>
-                    <div className="flex gap-x-4">
-                      {item.icons.map((icon, index) => (
-                        <div
-                          key={index}
-                          className="text-base md:text-2xl text-white"
-                        >
-                          {icon}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              }
-            })}
+            )}
           </div>
         </AnimatedLinkExperience>
       </div>

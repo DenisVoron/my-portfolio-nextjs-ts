@@ -66,4 +66,16 @@ export type SlidesTypes = {
   slides: ImagesArr[];
 };
 
+export type IconAboutData = {
+  title: string;
+  info: DataWithIcon[];
+};
+
+export type StageAboutData = {
+  title: string;
+  info: DataWithStage[];
+};
+
+export type TypeAboutData = (IconAboutData | StageAboutData)[];
+
 export type UnitedDataTyp = DataWithIcon | DataWithStage;
