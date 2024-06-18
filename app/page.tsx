@@ -18,13 +18,7 @@ const Home: FC = (): JSX.Element => {
             <span className="text-accent">Digital Reality</span>
           </AnimatedTitle>
           {/* {subtitle} */}
-          <AnimatedText>
-            The Internet has been made so well that many people think of it as a
-            natural resource like the Pacific Ocean, rather than something
-            man-made. When was the last time a technology of this scale worked
-            flawlessly? The web is a joke compared to that. The web was made by
-            amateurs.
-          </AnimatedText>
+          <AnimatedText/>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>

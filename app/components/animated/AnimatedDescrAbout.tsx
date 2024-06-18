@@ -11,7 +11,7 @@ const AnimatedDescrAbout: FC = (): JSX.Element => {
       initial="hidden"
       animate="show"
       exit="hidden"
-      className="overflow-auto h-[250px] md:h-auto max-w-[500px] md:max-w-[600px] mx-auto xl:mx-0 mb-4 xl:mb-12 px-2 xl:px-0 text-[13px] md:text-xs lg:text-base"
+      className="overflow-auto h-[250px] max-w-[500px] md:h-44 xl:h-auto lg:max-w-[670px] mx-auto xl:mx-0 mb-4 xl:mb-12 px-2 xl:px-0 text-[13px] md:text-xs lg:text-base"
     >
       Two years ago, my path in the field of IT - Full Stack developer began.{" "}
       <span className=" text-accent">Why exactly IT?</span> At one of the stages
