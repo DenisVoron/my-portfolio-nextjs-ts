@@ -15,14 +15,14 @@ import {
 import { NavDataType } from "../lib/definitions-type";
 
 // nav data
-export const navData = [
+export const navData: NavDataType[] = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "practice", path: "/practice", icon: <HiRectangleGroup /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
-    name: "testimonials",
-    path: "/testimonials",
+    name: "motivation",
+    path: "/motivation",
     icon: <HiChatBubbleBottomCenterText />,
   },
   {

@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { BsArrowRight } from "react-icons/bs";
 
 import Circles from "../components/Circles";
+import ContactForm from "../components/ContactForm";
 import AnimatedTitleContact from "../components/animated/AnimatedTitleContact";
 import AnimatedFormContact from "../components/animated/AnimatedFormContact";
 
@@ -18,7 +18,18 @@ const Contact: FC = (): JSX.Element => {
           </AnimatedTitleContact>
           {/* form */}
           <AnimatedFormContact>
-            <div className="md:flex md:gap-x-6 w-full">
+            <ContactForm />
+          </AnimatedFormContact>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
+
+{
+  /* <div className="md:flex md:gap-x-6 w-full">
               <input
                 type="text"
                 placeholder="name"
@@ -44,12 +55,5 @@ const Contact: FC = (): JSX.Element => {
                 Let`s talk
               </span>
               <BsArrowRight className=" -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
-            </button>
-          </AnimatedFormContact>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
+            </button> */
+}

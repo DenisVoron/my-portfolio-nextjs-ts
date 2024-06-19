@@ -76,6 +76,20 @@ export type StageAboutData = {
   info: DataWithStage[];
 };
 
+export type MotivationDataTypes = {
+  image: string;
+  name: string;
+  position: string;
+  message: string;
+};
+
+export type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 export type TypeAboutData = (IconAboutData | StageAboutData)[];
 
 export type UnitedDataTyp = DataWithIcon | DataWithStage;

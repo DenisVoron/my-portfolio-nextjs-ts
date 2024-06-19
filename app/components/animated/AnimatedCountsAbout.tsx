@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { type ChildProp } from "@/app/lib/definitions-type";
 import { fadeIn } from "@/app/lib/variant";
 
-const AnimatedCountsAbout: FC<ChildProp> = ({ children }): JSX.Element => {
-  return (
+const AnimatedCountsAbout: FC<ChildProp> = ({ children }): JSX.Element => (
     <motion.div
       variants={fadeIn("right", 0.6)}
       initial="hidden"
@@ -16,7 +15,6 @@ const AnimatedCountsAbout: FC<ChildProp> = ({ children }): JSX.Element => {
     >
       {children}
     </motion.div>
-  );
-};
+);
 
 export default AnimatedCountsAbout;

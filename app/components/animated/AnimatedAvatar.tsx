@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { type ChildProp } from "../../lib/definitions-type";
 import { fadeIn } from "../../lib/variant";
 
-const AnimatedAvatar: FC<ChildProp> = ({ children }): JSX.Element => {
-  return (
+const AnimatedAvatar: FC<ChildProp> = ({ children }): JSX.Element => (
     <motion.div
       variants={fadeIn("up", 0.5)}
       initial="hidden"
@@ -17,7 +16,6 @@ const AnimatedAvatar: FC<ChildProp> = ({ children }): JSX.Element => {
     >
       {children}
     </motion.div>
-  );
-};
+);
 
 export default AnimatedAvatar;
