@@ -1,15 +1,18 @@
 "use client";
 
 import { FC } from "react";
+
 import { useForm, SubmitHandler } from "react-hook-form";
 import { BsArrowRight } from "react-icons/bs";
 import { Inputs } from "../lib/definitions-type";
+// import { GET } from "../api/route";
 
 const ContactForm: FC = () => {
   const { register, handleSubmit, watch, reset } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     console.log(data);
+    // await GET(data);
     reset();
   };
 
