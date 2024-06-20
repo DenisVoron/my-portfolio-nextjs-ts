@@ -3,17 +3,32 @@
 import { FC } from "react";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { Bounce, toast } from "react-toastify";
 import { BsArrowRight } from "react-icons/bs";
+import sendingMail from "../fetch-api";
 import { Inputs } from "../lib/definitions-type";
-// import { GET } from "../api/route";
 
-const ContactForm: FC = () => {
+const ContactForm: FC = (): JSX.Element => {
   const { register, handleSubmit, watch, reset } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    console.log(data);
-    // await GET(data);
-    reset();
+    try {
+      reset();
+      const result = await sendingMail(data);
+
+      if (result.status === 200)
+        toast.info("Sent a letter!", {
+          theme: "dark",
+          transition: Bounce,
+        });
+
+      if (result.status === 500) throw new Error("something went wrong");
+    } catch {
+      toast.error("Something went wrong!", {
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
   };
 
   return (

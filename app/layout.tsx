@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Layout from "./components/Layout";
 import Animated from "./components/animated/Animated";
 
@@ -27,6 +30,17 @@ const RootLayout = ({
       >
         <Layout />
         <Animated>{children}</Animated>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          draggable
+          pauseOnHover
+          bodyClassName="rgba(55, 22, 116, 0.6)"
+        />
       </body>
     </html>
   );

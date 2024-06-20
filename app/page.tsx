@@ -18,7 +18,7 @@ const Home: FC = (): JSX.Element => {
             <span className="text-accent">Digital Reality</span>
           </AnimatedTitle>
           {/* {subtitle} */}
-          <AnimatedText/>
+          <AnimatedText />
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
