@@ -8,8 +8,15 @@ import { BsArrowRight } from "react-icons/bs";
 import sendingMail from "../fetch-api";
 import { Inputs } from "../lib/definitions-type";
 
+// const MailRegExp: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
 const ContactForm: FC = (): JSX.Element => {
-  const { register, handleSubmit, watch, reset } = useForm<Inputs>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
@@ -37,25 +44,27 @@ const ContactForm: FC = (): JSX.Element => {
         <input
           type="text"
           placeholder="name"
-          {...register("name")}
+          {...(register("name"), { required: true })}
           className="input h-12 md:h-14 mb-5 md:mb-0"
         />
+        {errors.name && <span>This is required</span>}
         <input
           type="text"
           placeholder="email"
-          {...register("email")}
+          {...(register("email"), { pattern: "" })}
           className="input h-12 md:h-14"
         />
+        {errors.email && <span>This is required</span>}
       </div>
       <input
         type="text"
         placeholder="subject"
-        {...register("subject")}
+        {...(register("subject"), { required: true })}
         className="input h-12 md:h-14"
       />
       <textarea
         placeholder="message"
-        {...register("message")}
+        {...(register("message"), { required: true, maxLength: 120 })}
         className="textarea"
       ></textarea>
       <button

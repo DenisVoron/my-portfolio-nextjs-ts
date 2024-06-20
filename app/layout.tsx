@@ -39,7 +39,6 @@ const RootLayout = ({
           rtl={false}
           draggable
           pauseOnHover
-          bodyClassName="rgba(55, 22, 116, 0.6)"
         />
       </body>
     </html>

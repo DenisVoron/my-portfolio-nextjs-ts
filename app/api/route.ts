@@ -30,14 +30,11 @@ export const POST = async (request: Request): Promise<NextResponse> => {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json(
-      { message: "Email send successfully", status: 200 },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      message: "Email send successfully",
+      status: 200,
+    });
   } catch (error) {
-    return NextResponse.json(
-      { message: "Failed to send email", status: 500 },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "Failed to send email", status: 500 });
   }
 };
