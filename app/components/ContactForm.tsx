@@ -8,15 +8,17 @@ import { BsArrowRight } from "react-icons/bs";
 import sendingMail from "../fetch-api";
 import { Inputs } from "../lib/definitions-type";
 
-// const MailRegExp: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+const MailRegExp: RegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 const ContactForm: FC = (): JSX.Element => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty, isValid },
     reset,
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({
+    defaultValues: { name: "", email: "", subject: "", message: "" },
+  });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
@@ -41,40 +43,56 @@ const ContactForm: FC = (): JSX.Element => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="md:flex md:gap-x-6 w-full">
-        <input
-          type="text"
-          placeholder="name"
-          {...(register("name"), { required: true })}
-          className="input h-12 md:h-14 mb-5 md:mb-0"
-        />
-        {errors.name && <span>This is required</span>}
-        <input
-          type="text"
-          placeholder="email"
-          {...(register("email"), { pattern: "" })}
-          className="input h-12 md:h-14"
-        />
-        {errors.email && <span>This is required</span>}
+        <div className="block w-[340px]">
+          <input
+            {...register("name", { required: true })}
+            type="text"
+            placeholder="name"
+            className="input h-12 md:h-14 mb-5 md:mb-0"
+          />
+          {errors.name && (
+            <span className="text-[10px] text-accent">This is required</span>
+          )}
+        </div>
+        <div className="block w-[340px]">
+          <input
+            {...register("email", {
+              required: true,
+              pattern: MailRegExp,
+            })}
+            type="text"
+            placeholder="email"
+            className="input h-12 md:h-14"
+          />
+          {errors.email && (
+            <span className="text-[10px] text-accent">
+              {
+                "Email required. Valid e-mail can contain only latin letters, numbers, '@' and '.'"
+              }
+            </span>
+          )}
+        </div>
       </div>
       <input
         type="text"
         placeholder="subject"
-        {...(register("subject"), { required: true })}
+        {...register("subject", { required: true })}
         className="input h-12 md:h-14"
       />
       <textarea
         placeholder="message"
-        {...(register("message"), { required: true, maxLength: 120 })}
+        {...register("message", { required: true, maxLength: 120 })}
         className="textarea"
       ></textarea>
       <button
+        disabled={!isDirty || !isValid}
         type="submit"
         className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
       >
-        <span className=" group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+        <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
           Let`s talk
         </span>
-        <BsArrowRight className=" -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+        <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
       </button>
     </form>
   );

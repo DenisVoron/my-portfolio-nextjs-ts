@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from "react";
 
 declare global {
   namespace JSX {
