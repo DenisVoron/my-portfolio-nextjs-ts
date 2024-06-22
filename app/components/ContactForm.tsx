@@ -15,7 +15,7 @@ const ContactForm: FC = (): JSX.Element => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isDirty, isValid },
+    formState: { errors },
     reset,
   } = useForm<Inputs>({
     criteriaMode: "all",

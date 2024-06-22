@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
 
 declare global {
   namespace JSX {
@@ -81,6 +81,12 @@ export type MotivationDataTypes = {
   name: string;
   position: string;
   message: string;
+};
+
+export type PracticeDataType = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
 };
 
 export type Inputs = {

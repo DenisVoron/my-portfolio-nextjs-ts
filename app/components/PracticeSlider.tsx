@@ -13,8 +13,10 @@ import {
   RxRocket,
 } from "react-icons/rx";
 
+import { PracticeDataType } from "../lib/definitions-type";
+
 // data
-const practiceData = [
+const practiceData: PracticeDataType[] = [
   {
     icon: <RxCrop />,
     title: "Soft skills",
@@ -76,7 +78,7 @@ const PracticeSlider: FC = (): JSX.Element => {
 
   return (
     <swiper-container class="h-[180px] sm:h-[220px] xl:mt-24">
-      {practiceData.map((item, index) => (
+      {practiceData.map((item: PracticeDataType, index: number) => (
         <swiper-slide
           key={index}
           style={{ backgroundColor: "rgba(65, 47, 123, 0.15)" }}
