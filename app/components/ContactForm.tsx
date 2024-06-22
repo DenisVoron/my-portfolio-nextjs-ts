@@ -3,6 +3,7 @@
 import { FC } from "react";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 import { Bounce, toast } from "react-toastify";
 import { BsArrowRight } from "react-icons/bs";
 import sendingMail from "../fetch-api";
@@ -17,7 +18,7 @@ const ContactForm: FC = (): JSX.Element => {
     formState: { errors, isDirty, isValid },
     reset,
   } = useForm<Inputs>({
-    defaultValues: { name: "", email: "", subject: "", message: "" },
+    criteriaMode: "all",
   });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -31,7 +32,7 @@ const ContactForm: FC = (): JSX.Element => {
           transition: Bounce,
         });
 
-      if (result.status === 500) throw new Error("something went wrong");
+      if (result.status === 500) throw new Error();
     } catch {
       toast.error("Something went wrong!", {
         theme: "dark",
@@ -45,47 +46,100 @@ const ContactForm: FC = (): JSX.Element => {
       <div className="md:flex md:gap-x-6 w-full">
         <div className="block w-[340px]">
           <input
-            {...register("name", { required: true })}
+            {...register("name", {
+              required: "Name required.",
+              maxLength: {
+                value: 10,
+                message: "This input exceed maxLength 10.",
+              },
+            })}
             type="text"
             placeholder="name"
             className="input h-12 md:h-14 mb-5 md:mb-0"
           />
-          {errors.name && (
-            <span className="text-[10px] text-accent">This is required</span>
-          )}
+          <ErrorMessage
+            errors={errors}
+            name="name"
+            render={({ messages }) =>
+              messages &&
+              Object.entries(messages).map(([type, message]) => (
+                <p key={type} className="text-[10px] mt-2 text-accent">
+                  {message}
+                </p>
+              ))
+            }
+          />
         </div>
         <div className="block w-[340px]">
           <input
             {...register("email", {
-              required: true,
-              pattern: MailRegExp,
+              required: "Email required.",
+              pattern: {
+                value: MailRegExp,
+                message:
+                  "Valid e-mail can contain only latin letters, numbers, '@' and '.'",
+              },
             })}
             type="text"
             placeholder="email"
             className="input h-12 md:h-14"
           />
-          {errors.email && (
-            <span className="text-[10px] text-accent">
-              {
-                "Email required. Valid e-mail can contain only latin letters, numbers, '@' and '.'"
-              }
-            </span>
-          )}
+          <ErrorMessage
+            errors={errors}
+            name="email"
+            render={({ messages }) =>
+              messages &&
+              Object.entries(messages).map(([type, message]) => (
+                <p key={type} className="text-[10px] mt-2 text-accent">
+                  {message}
+                </p>
+              ))
+            }
+          />
         </div>
       </div>
       <input
         type="text"
         placeholder="subject"
-        {...register("subject", { required: true })}
+        {...register("subject", {
+          required: "Subject required.",
+          maxLength: { value: 20, message: "This input exceed maxLength 20." },
+        })}
         className="input h-12 md:h-14"
+      />
+      <ErrorMessage
+        errors={errors}
+        name="subject"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p key={type} className="text-[10px] mt-2 text-accent">
+              {message}
+            </p>
+          ))
+        }
       />
       <textarea
         placeholder="message"
-        {...register("message", { required: true, maxLength: 120 })}
+        {...register("message", {
+          required: "Message required.",
+          maxLength: { value: 20, message: "This input exceed maxLength 20." },
+        })}
         className="textarea"
       ></textarea>
+      <ErrorMessage
+        errors={errors}
+        name="message"
+        render={({ messages }) =>
+          messages &&
+          Object.entries(messages).map(([type, message]) => (
+            <p key={type} className="text-[10px] mb-2 text-accent">
+              {message}
+            </p>
+          ))
+        }
+      />
       <button
-        disabled={!isDirty || !isValid}
         type="submit"
         className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
       >
