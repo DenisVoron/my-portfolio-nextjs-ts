@@ -2,8 +2,8 @@ import { FC } from "react";
 import WorkSlider from "@/app/components/WorkSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
+import AnimatedDescrWork from "../components/animated/AnimatedDescrWork";
 import AnimatedTitlePracticeAndWork from "../components/animated/AnimatedTitlePracticeAndWork";
-import AnimatedDescrPracticeAndWork from "../components/animated/AnimatedDescrPracticeAndWork";
 import AnimatedSliderPractiseAndWork from "../components/animated/AnimatedSliderPractiseAndWork";
 
 const Work: FC = (): JSX.Element => {
@@ -17,7 +17,7 @@ const Work: FC = (): JSX.Element => {
               My work <span className="text-accent">.</span>
             </AnimatedTitlePracticeAndWork>
             {/* description */}
-            <AnimatedDescrPracticeAndWork />
+            <AnimatedDescrWork />
           </div>
           {/* slider */}
           <AnimatedSliderPractiseAndWork>

@@ -1,7 +1,6 @@
 "use client";
 
 import { FC } from "react";
-
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { Bounce, toast } from "react-toastify";
@@ -44,7 +43,7 @@ const ContactForm: FC = (): JSX.Element => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="md:flex md:gap-x-6 w-full">
-        <div className="block w-[340px]">
+        <div className="block w-[345px]">
           <input
             {...register("name", {
               required: "Name required.",

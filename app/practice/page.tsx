@@ -3,7 +3,7 @@ import PracticeSlider from "@/app/components/PracticeSlider";
 import Bulb from "@/app/components/Bulb";
 import Circles from "@/app/components/Circles";
 import AnimatedTitlePracticeAndWork from "../components/animated/AnimatedTitlePracticeAndWork";
-import AnimatedDescrPracticeAndWork from "../components/animated/AnimatedDescrPracticeAndWork";
+import AnimatedDescrPractice from "../components/animated/AnimatedDescrPractice";
 import AnimatedSliderPractiseAndWork from "../components/animated/AnimatedSliderPractiseAndWork";
 
 const Practice: FC = (): JSX.Element => {
@@ -16,9 +16,7 @@ const Practice: FC = (): JSX.Element => {
             <AnimatedTitlePracticeAndWork>
               My practice <span className="text-accent">.</span>
             </AnimatedTitlePracticeAndWork>
-            <AnimatedDescrPracticeAndWork>
-              A little about my skills.
-            </AnimatedDescrPracticeAndWork>
+            <AnimatedDescrPractice/>
           </div>
           {/* slider */}
           <AnimatedSliderPractiseAndWork>
