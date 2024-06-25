@@ -3,8 +3,12 @@
 import { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import { Bounce, toast } from "react-toastify";
-import { BsArrowRight } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsEnvelopeArrowDown,
+  BsExclamationOctagonFill,
+} from "react-icons/bs";
+import toast from "react-hot-toast";
 import sendingMail from "../fetch-api";
 import { Inputs } from "../lib/definitions-type";
 
@@ -26,16 +30,28 @@ const ContactForm: FC = (): JSX.Element => {
       const result = await sendingMail(data);
 
       if (result.status === 200)
-        toast.info("Sent a letter!", {
-          theme: "dark",
-          transition: Bounce,
+        toast("Sent a letter!", {
+          icon: <BsEnvelopeArrowDown />,
+          duration: 3000,
+          style: {
+            padding: "12px",
+            borderRadius: "10px",
+            background: "rgb(19 20 36 / 0.4)",
+            color: "#fff",
+          },
         });
 
       if (result.status === 500) throw new Error();
     } catch {
-      toast.error("Something went wrong!", {
-        theme: "dark",
-        transition: Bounce,
+      toast("Something went wrong!", {
+        icon: <BsExclamationOctagonFill />,
+        duration: 3000,
+        style: {
+          padding: "12px",
+          borderRadius: "10px",
+          background: "rgb(19 20 36 / 0.4)",
+          color: "#da2929",
+        },
       });
     }
   };
