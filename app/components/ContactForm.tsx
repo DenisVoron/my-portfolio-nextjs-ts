@@ -14,6 +14,9 @@ import { Inputs } from "../lib/definitions-type";
 
 const MailRegExp: RegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
+const SUCCESSFULLY = 200;
+const REJECTED = 500;
+
 const ContactForm: FC = (): JSX.Element => {
   const {
     register,
@@ -29,7 +32,7 @@ const ContactForm: FC = (): JSX.Element => {
       reset();
       const result = await sendingMail(data);
 
-      if (result.status === 200)
+      if (result.status === SUCCESSFULLY)
         toast("Sent a letter!", {
           icon: <BsEnvelopeArrowDown />,
           duration: 3000,
@@ -41,7 +44,7 @@ const ContactForm: FC = (): JSX.Element => {
           },
         });
 
-      if (result.status === 500) throw new Error();
+      if (result.status === REJECTED) throw new Error();
     } catch {
       toast("Something went wrong!", {
         icon: <BsExclamationOctagonFill />,
