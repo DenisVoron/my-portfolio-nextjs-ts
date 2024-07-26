@@ -5,7 +5,7 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaVuejs,
+  FaAngular,
   FaFigma,
   FaNode,
   FaSass,
@@ -54,7 +54,7 @@ const aboutData: TypeAboutData = [
           <SiTypescript key={"SiTypescript"} title="TypeScript" />,
           <SiNextdotjs key={"SiNextdotjs"} title="NEXT.js" />,
           <FaReact key={"FaReact"} title="React" />,
-          <FaVuejs key={"FaVuejs"} title="Vue.js" />,
+          <FaAngular key={"FaAngular"} title="Angular" />,
           <SiTailwindcss key={"SiTailwindcss"} title="Tailwind-css" />,
           <SiFramer key={"SiFramer"} title="framer-motion" />,
         ],
@@ -120,7 +120,7 @@ const About: FC<ISearchParamsProp> = ({ searchParams }): JSX.Element => {
         <Avatar />
       </AnimatedAvatarAbout>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center sm:mt-1 lg:mt-0">
+        <div className="flex-1 flex flex-col justify-center sm:mt-1 lg:mt-0 xl:z-10">
           <AnimatedTitleAbout>
             Do what <span className="text-accent"> you</span> love!
           </AnimatedTitleAbout>
