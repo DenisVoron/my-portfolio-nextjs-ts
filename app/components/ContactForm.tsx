@@ -62,7 +62,7 @@ const ContactForm: FC = (): JSX.Element => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="md:flex md:gap-x-6 w-full">
-        <div className="block w-[345px]">
+        <div className="md:block md:w-[345px]">
           <input
             {...register("name", {
               required: "Name required.",
@@ -88,7 +88,7 @@ const ContactForm: FC = (): JSX.Element => {
             }
           />
         </div>
-        <div className="block w-[340px]">
+        <div className="md:block md:w-[345px]">
           <input
             {...register("email", {
               required: "Email required.",
